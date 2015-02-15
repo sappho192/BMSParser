@@ -1,4 +1,4 @@
-#ifndef BMSUTILS_H
+﻿#ifndef BMSUTILS_H
 #define BMSUTILS_H
 
 namespace BMSUtils

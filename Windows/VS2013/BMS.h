@@ -1,4 +1,4 @@
-#ifndef BMS_H
+﻿#ifndef BMS_H
 #define BMS_H
 
 #include <string>

@@ -1,4 +1,4 @@
-#ifndef BMSPARSER_H
+﻿#ifndef BMSPARSER_H
 #define BMSPARSER_H
 
 #include <iostream>
