@@ -15,22 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="..\..\Source\BMS.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BMSParser.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BMSUtils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Channel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HeaderField.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
     <ClInclude Include="main.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="BMSParser.h">
+    <ClInclude Include="..\..\Source\Measure.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="BMS.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="BMSUtils.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
