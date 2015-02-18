@@ -16,7 +16,7 @@ public:
 	BMSParser();
 	~BMSParser();
 
-	bool Run();
+	bool Run(std::string path);
 private:
 	bool OpenFile(std::string filePath);
 	bool ReadFile(std::ifstream &file);
@@ -33,10 +33,10 @@ BMSParser::~BMSParser()
 {
 }
 
-bool BMSParser::Run()
+bool BMSParser::Run(std::string path)
 {
-	std::string path;
-	path = "C:\\REPOSITORY\\BMSParser\\Resource\\test.bms";
+	//std::string path;
+	//path = "C:\\REPOSITORY\\BMSParser\\Resource\\test.bms";
 	//path = "C:\\REPOSITORY\\BMSParser\\Resource\\05.bon_voyage_7hyper.bme";
 
 	if (OpenFile(path)) {
