@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="BMSParser">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQQAEAAAAAAAEAAAAAAEAAAAAAAAAAAAo=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMSParser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMSUtils::File_t">
+    <Position X="7" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAABRAAAAAAAAIAAAAABAAQAgAAACBAAAAAAAAAIA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMSUtils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMS" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMS.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMSUtils::Command_t">
+    <Position X="9.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACAgAgAIAAAAAAAAAAAAAAAgAAAAAIAAAAgAAA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMSUtils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMSUtils::Channel_t">
+    <Position X="7" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABABAAAAAAAGQCAAAAAAAAEAABABABAAAAAABAAA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMSUtils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMSUtils::Measure_t">
+    <Position X="9.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAABAQAAAEBAAAAAAAAABAAAAAQAACABAA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMSUtils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeaderField">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>HoClBABMQFBAAHMgCROACAGAAYAMRAAQAAABAQAAABA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\HeaderField.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Measure">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgAgAEQAAgIAAEAAAEAAAAAAABAAAAQAAAAA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\Measure.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="BMSUtils::Noteseq_t" Collapsed="true">
+    <Position X="9.75" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\REPOSITORY\BMSParser\Source\BMSUtils.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
