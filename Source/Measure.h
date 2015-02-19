@@ -85,8 +85,8 @@ void Measure::FinishedMeasure()
 void Measure::AddNoteSeqOnMeasure(unsigned int measure_num, std::string channel, BMSUtils::Noteseq_t noteseq)
 {
 	if (std::distance(measures_.begin(), measures_.end()) == 0)
-	{
-		BMSUtils::Channel_t new_channel(channel, measure_num, noteseq);
+	{// Initial push
+		BMSUtils::Channel_t new_channel(channel, 1, noteseq);
 		AddChannelInMeasure(measure_num, new_channel);
 	}
 	else
