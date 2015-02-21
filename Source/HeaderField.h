@@ -28,6 +28,7 @@ public:
 	void AddBMPFile(std::string str_num, std::string path, std::string extension);
 
 	void AddSTOPCmd(std::string str_num, std::string str_data);
+	void AddBPMCmd(std::string str_num, std::string str_bpm);
 
 	void SetLongNoteType(std::string type);
 	void AddLongNote(std::string note_num);
@@ -52,6 +53,9 @@ public:
 	std::deque <BMSUtils::Command_t> GetSTOPList();
 	void PrintSTOPList();
 
+	std::deque <BMSUtils::Command_t> GetBPMList();
+	void PrintBPMList();
+
 	std::string GetLongNoteType();
 	std::forward_list <std::string> GetLongNoteList();
 	void PrintLongNoteList();
@@ -72,6 +76,7 @@ private:
 	std::deque <BMSUtils::File_t> dq_WAV;
 	std::deque <BMSUtils::File_t> dq_BMP;
 	std::deque <BMSUtils::Command_t> dq_STOP;
+	std::deque <BMSUtils::Command_t> dq_BPM;
 };
 
 HeaderField::HeaderField()
@@ -149,6 +154,12 @@ void HeaderField::AddSTOPCmd(std::string str_num, std::string str_data)
 {
 	BMSUtils::Command_t data(str_num, str_data);
 	dq_STOP.push_back(data);
+}
+
+void HeaderField::AddBPMCmd(std::string str_num, std::string str_bpm)
+{
+	BMSUtils::Command_t data(str_num, str_bpm);
+	dq_BPM.push_back(data);
 }
 
 void HeaderField::SetLongNoteType(std::string type)
@@ -249,6 +260,19 @@ void HeaderField::PrintSTOPList()
 	for (unsigned int i = 0; i < dq_STOP.size(); i++)
 	{
 		std::cout << "STOP" << dq_STOP.at(i).GetCommandNum() << ": " << dq_STOP.at(i).GetCommandData() << std::endl;
+	}
+}
+
+std::deque<BMSUtils::Command_t> HeaderField::GetBPMList()
+{
+	return dq_BPM;
+}
+
+void HeaderField::PrintBPMList()
+{
+	for (unsigned int i = 0; i < dq_BPM.size(); i++)
+	{
+		std::cout << "STOP" << dq_BPM.at(i).GetCommandNum() << ": " << dq_BPM.at(i).GetCommandData() << std::endl;
 	}
 }
 

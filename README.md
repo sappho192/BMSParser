@@ -8,7 +8,7 @@ Parsing BMS format which is for non-commercial rhythm game.
 
 ## Parsable preprocessors of HEADER FIELD
 
-\#PLAYER, \#GENRE, \#TITLE, \#ARTIST, \#BPM, \#PLAYLEVEL, \#RANK, \#TOTAL, \#VOLWAV, \#STAGEFILE, \#STOPxx, \#LNTYPE 1, \#LNTYPE 2, \#LNOBJ  
+\#PLAYER, \#GENRE, \#TITLE, \#ARTIST, \#BPM, \#PLAYLEVEL, \#RANK, \#TOTAL, \#VOLWAV, \#STAGEFILE, \#STOPxx, \#LNTYPE 1, \#LNTYPE 2, \#LNOBJ, \#BPMxx  
 
 ## Parsable preprocessors of MAIN DATA FIELD
 
@@ -16,8 +16,7 @@ Parsing BMS format which is for non-commercial rhythm game.
 
 ## Unimplemented preprocessors
 
-
-\#BPMxx, \#BGAxx 
+\#BGAxx 
 
 ### Origined from nanasi
 

@@ -181,6 +181,18 @@ BMS BMSParser::ParseData()
 				str_data = q_data.front().substr(8, length);
 				bms.AddSTOPCmd(str_num, str_data);
 			}
+			else if (std::regex_search(q_data.front(), std::regex("^(#BPM)[0-9,A-Z]{2}")))
+			{// #BPMxx
+				std::string str_num = "";
+				std::string str_bpm = "";
+
+				str_num = q_data.front().substr(4, 2);
+
+				int length = q_data.front().length() - 5;
+				str_bpm = q_data.front().substr(6, length);
+
+				bms.AddBPMCmd(str_num, str_bpm);
+			}
 			else if (q_data.front().substr(0, 7) == "#LNTYPE")
 			{
 				bms.SetLongNoteType(q_data.front().substr(8, 1));
@@ -220,9 +232,10 @@ BMS BMSParser::ParseData()
 	bms.PrintWAVFileList();
 	bms.PrintBMPFileList();
 	bms.PrintSTOPList();
+	bms.PrintBPMList();
+	bms.PrintLongNoteList();
 
 	bms.PrintMeasures();
-	bms.PrintLongNoteList();
 
 	return bms;
 }
