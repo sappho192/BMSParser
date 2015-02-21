@@ -5,7 +5,11 @@ int main(void)
 	std::string path("C:\\REPOSITORY\\BMSParser\\Resource\\test.bms");
 	BMSParser parser;
 
-	parser.Run(path);
+	if (parser.Run(path))
+	{
+		parser.Print();
+		BMS bms = parser.GetBMS();
+	}
 
 	return 0;
 }
