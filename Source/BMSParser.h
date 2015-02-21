@@ -181,6 +181,15 @@ BMS BMSParser::ParseData()
 				str_data = q_data.front().substr(8, length);
 				bms.AddSTOPCmd(str_num, str_data);
 			}
+			else if (q_data.front().substr(0, 7) == "#LNTYPE")
+			{
+				bms.SetLongNoteType(q_data.front().substr(8, 1));
+			}
+			else if (q_data.front().substr(0, 6) == "#LNOBJ")
+			{
+				bms.SetLongNoteType("LNOBJ");
+				bms.AddLongNote(q_data.front().substr(7, 2));
+			}
 		}
 
 		if (q_data.front() == "*---------------------- MAIN DATA FIELD")
@@ -213,6 +222,7 @@ BMS BMSParser::ParseData()
 	bms.PrintSTOPList();
 
 	bms.PrintMeasures();
+	bms.PrintLongNoteList();
 
 	return bms;
 }

@@ -149,6 +149,22 @@ namespace BMSUtils
 		std::queue<Channel_t> channels;
 	};
 
+	// Use AddLongNoteNum() & GetLongNoteList when the BMS uses LNOBJ
+	class LongNote_t
+	{
+	public:
+		LongNote_t() {}
+
+		void SetType(std::string input) { type_ = input; }
+		void AddLongNoteNum(std::string notenum) { longnotes_.push_front(notenum); }
+
+		std::string GetType() { return type_; }
+		std::forward_list<std::string> GetLongNoteList() { return longnotes_; }
+	private:
+		std::string type_ = "";
+		std::forward_list<std::string> longnotes_;
+	};
+
 	/* Functions on here should be static */
 
 }

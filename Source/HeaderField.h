@@ -4,6 +4,7 @@
 #include <string>
 #include <deque>
 #include <tuple>
+#include <forward_list>
 
 #include "BMSUtils.h"
 
@@ -28,6 +29,9 @@ public:
 
 	void AddSTOPCmd(std::string str_num, std::string str_data);
 
+	void SetLongNoteType(std::string type);
+	void AddLongNote(std::string note_num);
+
 	int GetPlayer();
 	std::string GetGenre();
 	std::string GetTitle();
@@ -47,6 +51,10 @@ public:
 
 	std::deque <BMSUtils::Command_t> GetSTOPList();
 	void PrintSTOPList();
+
+	std::string GetLongNoteType();
+	std::forward_list <std::string> GetLongNoteList();
+	void PrintLongNoteList();
 private:
 	/* BMS HEADER FIELD */
 	int Player = 0;
@@ -59,6 +67,7 @@ private:
 	int Total = 0;
 	int VolumeWav = 0;
 	std::string StageFile = "";
+	BMSUtils::LongNote_t LongNotes;
 
 	std::deque <BMSUtils::File_t> dq_WAV;
 	std::deque <BMSUtils::File_t> dq_BMP;
@@ -140,6 +149,16 @@ void HeaderField::AddSTOPCmd(std::string str_num, std::string str_data)
 {
 	BMSUtils::Command_t data(str_num, str_data);
 	dq_STOP.push_back(data);
+}
+
+void HeaderField::SetLongNoteType(std::string type)
+{
+	LongNotes.SetType(type);
+}
+
+void HeaderField::AddLongNote(std::string note_num)
+{
+	LongNotes.AddLongNoteNum(note_num);
 }
 
 int HeaderField::GetPlayer()
@@ -230,6 +249,35 @@ void HeaderField::PrintSTOPList()
 	for (unsigned int i = 0; i < dq_STOP.size(); i++)
 	{
 		std::cout << "STOP" << dq_STOP.at(i).GetCommandNum() << ": " << dq_STOP.at(i).GetCommandData() << std::endl;
+	}
+}
+
+std::string HeaderField::GetLongNoteType()
+{
+	return LongNotes.GetType();
+}
+
+std::forward_list <std::string> HeaderField::GetLongNoteList()
+{
+	return LongNotes.GetLongNoteList();
+}
+
+void HeaderField::PrintLongNoteList()
+{
+	if (LongNotes.GetType() == "1" || LongNotes.GetType() == "2")
+	{
+		std::cout << "The BMS uses LNTYPE " << LongNotes.GetType() << std::endl;
+	}
+	else if (LongNotes.GetType() == "LNOBJ")
+	{
+		for (auto it = LongNotes.GetLongNoteList().begin(); it != LongNotes.GetLongNoteList().end(); ++it)
+		{
+			std::cout << "LNOBJ " << *it << std::endl;
+		}
+	}
+	else
+	{
+		std::cout << "It seems that the BMS don't uses longnote" << std::endl;
 	}
 }
 
