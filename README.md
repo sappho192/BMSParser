@@ -6,6 +6,9 @@ Parsing BMS format which is for non-commercial rhythm game.
 [http://cosmic.mearie.org/2005/03/bmsguide/](http://cosmic.mearie.org/2005/03/bmsguide/ "Guide to understand BMS format")  
 [http://hitkey.nekokan.dyndns.info/cmds.htm](http://hitkey.nekokan.dyndns.info/cmds.htm "BMS command memo (draft)")  
 
+## Class diagram
+![Class diagram](https://github.com/sappho192/BMSParser/blob/master/ClassDiagram.png)
+
 ## Parsable preprocessors of HEADER FIELD
 
 \#PLAYER, \#GENRE, \#TITLE, \#ARTIST, \#BPM, \#PLAYLEVEL, \#RANK, \#TOTAL, \#VOLWAV, \#STAGEFILE, \#STOPxx, \#LNTYPE 1, \#LNTYPE 2, \#LNOBJ, \#BPMxx  
