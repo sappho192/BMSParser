@@ -294,7 +294,8 @@ void HeaderField::PrintLongNoteList()
 	}
 	else if (LongNotes.GetType() == "LNOBJ")
 	{
-		for (auto it = LongNotes.GetLongNoteList().begin(); it != LongNotes.GetLongNoteList().end(); ++it)
+		auto itlist = LongNotes.GetLongNoteList();
+		for (auto it = itlist.begin(); it != itlist.end(); ++it)
 		{
 			std::cout << "LNOBJ " << *it << std::endl;
 		}
